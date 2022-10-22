@@ -1,24 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import VPButtons from './components/TurnTracker';
+import {useState} from 'react';
+import TurnComponent from './components/TurnTracker';
 
 function App() {
+  const [turn, setTurn] = useState(1);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        
-          Edit <code>src/App.js</code> and save to reload and update.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TurnComponent turn={turn} setTurn={setTurn}/>
     </div>
   );
 }
