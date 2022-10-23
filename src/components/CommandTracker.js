@@ -10,8 +10,8 @@ function CommandComponent(props) {
         <p>CP: {props.commandPoints}</p>
         {/* button to decrease command by 1 to minimum of 0*/}
         <button onClick={() => props.commandPoints >0 ?props.setCommandPoints(props.commandPoints - 1):props.setCommandPoints}>-1</button>
-        <button onClick={() => props.commandPoints >0 ?props.setCommandPoints(props.commandPoints - 2):props.setCommandPoints}>-2</button>
-        <button onClick={() => props.commandPoints >0 ?props.setCommandPoints(props.commandPoints - 3):props.setCommandPoints}>-3</button>
+        <button onClick={() => props.commandPoints >1 ?props.setCommandPoints(props.commandPoints - 2):props.setCommandPoints}>-2</button>
+        <button onClick={() => props.commandPoints >2 ?props.setCommandPoints(props.commandPoints - 3):props.setCommandPoints}>-3</button>
         </div>
         
       
