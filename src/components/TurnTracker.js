@@ -9,6 +9,10 @@ function TurnComponent(props) {
     if(props.turn > 1){
     props.setTurn(props.turn - 1);
     props.setCommandPoints(props.commandPoints - 1);
+    }else{
+     //TODO: add an error here when previous statement cannnot run
+   
+
     }
    }
 

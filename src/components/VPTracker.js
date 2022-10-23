@@ -34,7 +34,8 @@ function VPComponent(props) {
     <ul>
       {props.totalVP.map((counter, i) => (
         <li key={i}>
-          {counter}
+          Turn {i+1}: 
+          {" " + counter + " "}
           {/* DONE: Stop counting at 15  - handled in increment handler*/}
           <button onClick={() => {
             handleIncrementClick(i);
