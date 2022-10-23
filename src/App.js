@@ -4,12 +4,13 @@ import TurnComponent from './components/TurnTracker';
 import ChivalryComponent from './components/ChivalricTracker';
 import Header from './components/Header';
 import CommandComponent from './components/CommandTracker';
+import VPComponent from './components/VPTracker';
 
 function App() {
   const [turn, setTurn] = useState(1);
   const [chivalry, setChivalry] = useState(1);
   const [commandPoints, setCommandPoints] = useState(1);
-  const [totalVP, setTotalVP] = useState(0);
+  const [totalVP, setTotalVP] = useState([0,0,0,0,0]);
 
 
   return (
@@ -20,6 +21,7 @@ function App() {
       <div className='Component'><TurnComponent turn={turn} setTurn={setTurn} commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
       <div className='Component'> <ChivalryComponent chivalry={chivalry} setChivalry={setChivalry}/></div>
       <div className='Component'><CommandComponent commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
+      <div className='Component'><VPComponent totalVP={totalVP} setTotalVP={setTotalVP}/></div>
       </div>
 
     </div>
