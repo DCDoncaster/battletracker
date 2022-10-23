@@ -19,7 +19,7 @@ function App() {
 
       <div id='row1'>
       <div className='Component'><TurnComponent turn={turn} setTurn={setTurn} commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
-      <div className='Component'> <ChivalryComponent chivalry={chivalry} setChivalry={setChivalry}/></div>
+      <div className='Component'><ChivalryComponent chivalry={chivalry} setChivalry={setChivalry}/></div>
       <div className='Component'><CommandComponent commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
       <div className='Component'><VPComponent totalVP={totalVP} setTotalVP={setTotalVP}/></div>
       </div>

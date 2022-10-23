@@ -3,27 +3,27 @@ import React from 'react';
 
 function VPComponent(props) {
 
-// TODO add a decrement button for VP
+// DONE add a decrement button for VP
   function handleIncrementClick(index) {
-    const nextVP = props.totalVP.map((c, i) => {
+    const nextVP = props.totalVP.map((list, i) => {
       if (i === index) {
         // Increment the clicked counter
-        return c===15? 15: c + 1;
+        return list===15? 15: list + 1;
       } else {
         // The rest haven't changed
-        return c;
+        return list;
       }
     });
     props.setTotalVP(nextVP);
   }
   function handleDecrementClick(index) {
-    const nextVP = props.totalVP.map((c, i) => {
+    const nextVP = props.totalVP.map((list, i) => {
       if (i === index) {
         // Increment the clicked counter
-        return c<=0? 0: c - 1;
+        return list<=0? 0: list - 1;
       } else {
         // The rest haven't changed
-        return c;
+        return list;
       }
     });
     props.setTotalVP(nextVP);
@@ -35,7 +35,7 @@ function VPComponent(props) {
       {props.totalVP.map((counter, i) => (
         <li key={i}>
           {counter}
-          {/* TODO: Stop counting at 15 */}
+          {/* DONE: Stop counting at 15  - handled in increment handler*/}
           <button onClick={() => {
             handleIncrementClick(i);
           }}>+1</button>
