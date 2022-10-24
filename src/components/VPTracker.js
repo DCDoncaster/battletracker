@@ -37,12 +37,13 @@ function VPComponent(props) {
           Turn {i+1}: 
           {" " + counter + " "}
           {/* DONE: Stop counting at 15  - handled in increment handler*/}
-          <button onClick={() => {
-            handleIncrementClick(i);
-          }}>+1</button>
+
           <button onClick={() => {
             handleDecrementClick(i);
           }}>-1</button>
+                    <button onClick={() => {
+            handleIncrementClick(i);
+          }}>+1</button>
         </li>
       ))}
     </ul>
