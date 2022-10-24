@@ -1,16 +1,31 @@
 import './App.css';
-import {useState} from 'react';
+import React from 'react';
 import TurnComponent from './components/TurnTracker';
 import ChivalryComponent from './components/ChivalricTracker';
 import Header from './components/Header';
 import CommandComponent from './components/CommandTracker';
 import VPComponent from './components/VPTracker';
 
+//Code to store state in local storage
+function useStickyState(defaultValue, key) {
+  const [value, setValue] = React.useState(() => {
+    const stickyValue = window.localStorage.getItem(key);
+    return stickyValue !== null
+      ? JSON.parse(stickyValue)
+      : defaultValue;
+  });
+  React.useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+  return [value, setValue];
+}
+
 function App() {
-  const [turn, setTurn] = useState(1);
-  const [chivalry, setChivalry] = useState(1);
-  const [commandPoints, setCommandPoints] = useState(1);
-  const [totalVP, setTotalVP] = useState([0,0,0,0,0]);
+  
+  const [turn, setTurn] = useStickyState(1, "turn");
+  const [chivalry, setChivalry] = useStickyState(1, "chivalry");
+  const [commandPoints, setCommandPoints] = useStickyState(1, "commandPoints");
+  const [totalVP, setTotalVP] = useStickyState([0,0,0,0,0], "totalVP");
 
 
   return (
