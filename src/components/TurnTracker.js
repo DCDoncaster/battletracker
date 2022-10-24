@@ -21,12 +21,12 @@ function TurnComponent(props) {
     return (
       <div className='buttonWrapper'>
         {/* button to increase turn by 1 */}
-        <button onClick={addCPOnNewTurn}>+</button>
+        <button className='customBtn' onClick={addCPOnNewTurn}>+</button>
         {/* display current turn */}
         <p>Turn: {props.turn}</p>
         {/* button to decrease turn by 1 to minimum of 0*/}
         {/*DONE:  Would like this to incremenent/decrement CP appropriately at some point in future */}
-        <button onClick={stepBackTurn}>-</button>
+        <button className='customBtn' onClick={stepBackTurn}>-</button>
       </div>
     );
   }

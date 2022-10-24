@@ -10,6 +10,7 @@ import VPComponent from './components/VPTracker';
 function useStickyState(defaultValue, key) {
   const [value, setValue] = React.useState(() => {
     const stickyValue = window.localStorage.getItem(key);
+    //If there's a value parse it, if not apply the default value provided from state
     return stickyValue !== null
       ? JSON.parse(stickyValue)
       : defaultValue;
@@ -21,7 +22,7 @@ function useStickyState(defaultValue, key) {
 }
 
 function App() {
-  
+  //TODO: Add a reset button to reset all counters to 0
   const [turn, setTurn] = useStickyState(1, "turn");
   const [chivalry, setChivalry] = useStickyState(1, "chivalry");
   const [commandPoints, setCommandPoints] = useStickyState(1, "commandPoints");
