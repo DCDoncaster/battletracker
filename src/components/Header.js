@@ -7,6 +7,8 @@ function resetStates(){
   props.setCommandPoints(1);
   props.setTurn(1);
   props.setTotalVP([0,0,0,0,0]);
+  props.setCode1("Select an Oath");
+  props.setCode2("Select an Oath");
 }
     return (
       <div id="Header">
@@ -17,6 +19,9 @@ function resetStates(){
         <h2>Total Victory Points: {props.totalVP.reduce((a, b) => a + b, 0)}</h2>
         </div>
         <button className='customBtn' onClick={resetStates}>Reset</button>
+        <p>{props.code1}</p>
+        <p>{props.code2}</p>
+        
       </div>
       
     );
