@@ -3,15 +3,19 @@ import React from 'react';
 function TurnComponent(props) {
    function addCPOnNewTurn(){
     // TODO limit turns to 5
+    if(props.turn < 5){
     props.setTurn(props.turn + 1);
-    props.setCommandPoints(props.commandPoints + 1);
+    props.setCommandPoints(props.commandPoints + 1);}
+    else{
+      alert("You have reached the maximum number of turns");
+    }
    }
    function stepBackTurn(){
     if(props.turn > 1){
     props.setTurn(props.turn - 1);
     props.setCommandPoints(props.commandPoints - 1);
     }else{
-     //TODO: add an error here when previous statement cannnot run
+     alert("You can't got to turn zero!")
    
 
     }

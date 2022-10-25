@@ -24,7 +24,7 @@ function useStickyState(defaultValue, key) {
 
 
 function App() {
-  //TODO: Add a reset button to reset all counters to 0
+  //DONE: Add a reset button to reset all counters to 0
   const [turn, setTurn] = useStickyState(1, "turn");
   const [chivalry, setChivalry] = useStickyState(1, "chivalry");
   const [commandPoints, setCommandPoints] = useStickyState(1, "commandPoints");
@@ -34,7 +34,6 @@ function App() {
   return (
     <div className="App">
       <div className='Component'><Header chivalry={chivalry} totalVP={totalVP} setTurn={setTurn} setChivalry={setChivalry} setCommandPoints={setCommandPoints} setTotalVP={setTotalVP}/></div>
-
       <div id='row1'>
       <div className='Component'><TurnComponent turn={turn} setTurn={setTurn} commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
       <div className='Component'><ChivalryComponent chivalry={chivalry} setChivalry={setChivalry}/></div>

@@ -12,7 +12,6 @@
   background-color: palegoldenrod;
 }
 
-
 .Component{
   display: flex;
   text-align: center;
@@ -20,8 +19,9 @@
   margin: auto;
   background-color: lightgray;
   border-style: solid;
-
+  border-color: red;
 }
+
 .buttonWrapper{
   display: flex;
   text-align: center;
@@ -29,31 +29,7 @@
   margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-
-#Header{
-  display: flex;
-  flex-direction: row;
-  
-}
-#HeaderLeft{
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-}
-
 .customBtn {
-
   display: inline-block;
   outline: 0;
   cursor: pointer;
@@ -69,18 +45,14 @@
   transition-duration: .15s;
   transition-property: all;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-
-  
- }
+}
  .customBtn:hover{
   color: #000;
   background: rgb(255, 218, 87);
 }
-
 .clearList{
   list-style-type: none;
 }
-
 #primaryVP{
   display: flex;
   flex-direction: column;
