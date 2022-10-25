@@ -41,6 +41,55 @@
 }
 
 
+#Header{
+  display: flex;
+  flex-direction: row;
+  
+}
+#HeaderLeft{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
 .customBtn {
-  /* Put something here to make them look nicer, affects all buttons */
+
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 0.5rem;
+  padding: 12px 20px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+
+  
  }
+ .customBtn:hover{
+  color: #000;
+  background: rgb(255, 218, 87);
+}
+
+.clearList{
+  list-style-type: none;
+}
+
+#primaryVP{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#primaryHolder{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  background-color: palegoldenrod;
+}

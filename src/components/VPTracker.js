@@ -1,5 +1,5 @@
 import React from "react";
-
+//TODO: Stop VP being changed for none current turn
 function VPComponent(props) {
   // DONE add a decrement button for VP
   function handleIncrementClick(index) {
@@ -28,14 +28,17 @@ function VPComponent(props) {
   }
 
   return (
-    <div>
-      <h3>VP</h3>
-      <ul>
+    <div id='primaryVP'>
+      <p>
+        <h3>VP</h3>
+      </p>
+      <div id='primaryHolder'>
+      <p>
         {props.totalVP.map((counter, i) => (
-          <li key={i}>
+          <p className='clearList' key={i}>
             Turn {i + 1}:{" " + counter + " "}
             {/* DONE: Stop counting at 15  - handled in increment handler*/}
-            <button  className='customBtn'
+            <button className='customBtn'
               onClick={() => {
                 handleDecrementClick(i);
               }}
@@ -49,9 +52,10 @@ function VPComponent(props) {
             >
               +1
             </button>
-          </li>
+          </p>
         ))}
-      </ul>
+      </p>
+      </div>
     </div>
   );
 }

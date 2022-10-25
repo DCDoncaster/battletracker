@@ -41,7 +41,6 @@ function App() {
       <div className='Component'><CommandComponent commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
       <div className='Component'><VPComponent totalVP={totalVP} setTotalVP={setTotalVP}/></div>
       </div>
-
     </div>
   );
 }
