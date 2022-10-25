@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/battletracker/static/css/main.59744003.css",
-    "main.js": "/battletracker/static/js/main.89f7ce0a.js",
+    "main.css": "/battletracker/static/css/main.85f283bc.css",
+    "main.js": "/battletracker/static/js/main.9a381258.js",
     "static/js/787.5c670dc6.chunk.js": "/battletracker/static/js/787.5c670dc6.chunk.js",
     "index.html": "/battletracker/index.html",
-    "main.59744003.css.map": "/battletracker/static/css/main.59744003.css.map",
-    "main.89f7ce0a.js.map": "/battletracker/static/js/main.89f7ce0a.js.map",
+    "main.85f283bc.css.map": "/battletracker/static/css/main.85f283bc.css.map",
+    "main.9a381258.js.map": "/battletracker/static/js/main.9a381258.js.map",
     "787.5c670dc6.chunk.js.map": "/battletracker/static/js/787.5c670dc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59744003.css",
-    "static/js/main.89f7ce0a.js"
+    "static/css/main.85f283bc.css",
+    "static/js/main.9a381258.js"
   ]
 }
