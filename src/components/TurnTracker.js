@@ -2,7 +2,7 @@ import React from 'react';
 
 function TurnComponent(props) {
    function addCPOnNewTurn(){
-    // TODO limit turns to 5
+    // DONE limit turns to 5
     if(props.turn < 5){
     props.setTurn(props.turn + 1);
     props.setCommandPoints(props.commandPoints + 1);}

@@ -9,6 +9,12 @@ function resetStates(){
   props.setTotalVP([0,0,0,0,0]);
   props.setCode1("Select an Oath");
   props.setCode2("Select an Oath");
+//set text of select2 in ChivalricTracker.js to "Select an Oath"
+  document.getElementById("CCode1").
+  options[0].selected = true;
+  document.getElementById("CCode2").
+  options[0].selected = true;
+
 }
     return (
       <div id="Header">
