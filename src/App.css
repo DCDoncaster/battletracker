@@ -53,15 +53,18 @@
 .clearList{
   list-style-type: none;
 }
-#primaryVP{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-#primaryHolder{
+
+#primaryVPHolder{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: left;
-  background-color: palegoldenrod;
+  background-color: orange;
+  
+}
+.VPDiv{
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: red;
+border-style: solid;
+border-color: white;
 }

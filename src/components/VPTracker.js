@@ -28,23 +28,14 @@ function VPComponent(props) {
   }
 
   return (
-    <div id='primaryVP'>
-      <p>
-        <h3>VP</h3>
-      </p>
-      <div id='primaryHolder'>
+    
+      <div id='primaryVPHolder'>
+ 
       <p>
         {props.totalVP.map((counter, i) => (
-          <p className='clearList' key={i}>
-            Turn {i + 1}:{" " + counter + " "}
+          <div className='VPDiv'>
+           
             {/* DONE: Stop counting at 15  - handled in increment handler*/}
-            <button className='customBtn'
-              onClick={() => {
-                handleDecrementClick(i);
-              }}
-            >
-              -1
-            </button>
             <button className='customBtn'
               onClick={() => {
                 handleIncrementClick(i);
@@ -52,11 +43,22 @@ function VPComponent(props) {
             >
               +1
             </button>
-          </p>
+            Turn {i + 1}:{" " + counter + " "}
+            
+            <button className='customBtn'
+              onClick={() => {
+                handleDecrementClick(i);
+              }}
+            >
+              -1
+            </button>
+        
+          </div>
         ))}
       </p>
       </div>
-    </div>
+    
+    
   );
 }
 
