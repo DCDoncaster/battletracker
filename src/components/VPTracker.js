@@ -27,39 +27,17 @@ function VPComponent(props) {
     props.setTotalVP(nextVP);
   }
 
-  return (
-    
-      <div id='primaryVPHolder'>
- 
-      <p>
-        {props.totalVP.map((counter, i) => (
-          <div className='VPDiv'>
-           
-            {/* DONE: Stop counting at 15  - handled in increment handler*/}
-            <button className='customBtn'
-              onClick={() => {
-                handleIncrementClick(i);
-              }}
-            >
-              +1
-            </button>
-            Turn {i + 1}:{" " + counter + " "}
-            
-            <button className='customBtn'
-              onClick={() => {
-                handleDecrementClick(i);
-              }}
-            >
-              -1
-            </button>
-        
-          </div>
-        ))}
-      </p>
-      </div>
-    
-    
-  );
+return <div id='primaryVPHolder'>
+{props.totalVP.map((mapVP,index)=>{
+  return <div className="VPDiv">
+    <button className="customBtn" onClick={() => handleIncrementClick(index)}>+</button>
+    <p>Turn {index+1} VP: {mapVP}</p>
+    <button className="customBtn" onClick={() => handleDecrementClick(index)}>-</button>
+  </div>
+})}
+</div>
+
+
 }
 
 export default VPComponent;

@@ -18,8 +18,11 @@
   flex-direction: row;
   margin: auto;
   background-color: lightgray;
-  border-style: solid;
-  border-color: red;
+  /* border with rounded corners in gray */
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+
 }
 
 .buttonWrapper{
@@ -56,15 +59,18 @@
 
 #primaryVPHolder{
   display: flex;
-  flex-direction: row;
-  background-color: orange;
+  /* set width to full screen */
+  width: 100%;
+    flex-direction: row;
+  background-color: yellow;
   
 }
 .VPDiv{
 display: flex;
+width: 20%;
 flex-direction: column;
 justify-content: center;
-background-color: red;
 border-style: solid;
-border-color: white;
+border-width: 1px;
+border-color: black;
 }
