@@ -31,7 +31,7 @@ return <div id='primaryVPHolder'>
 {props.totalVP.map((mapVP,index)=>{
   return <div className="VPDiv">
     <button className="customBtn" onClick={() => handleIncrementClick(index)}>+</button>
-    <p>Turn {index+1} VP: {mapVP}</p>
+    <p>Turn {index+1} <br />VP: {mapVP}</p>
     <button className="customBtn" onClick={() => handleDecrementClick(index)}>-</button>
   </div>
 })}

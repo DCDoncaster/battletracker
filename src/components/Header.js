@@ -15,16 +15,15 @@ function resetStates(){
 }
     return (
       <div id="Header">
-        <div id = "HeaderLeft">
+
         {/* TODO: add a selector so the house is not hardcoded and can be changed */}
-        <h1>The {props.chivalry === 0?"Dishonoured":props.chivalry > 4?"Virtuous":"Honoured"} Knights of House Hawkshroud</h1>
+        <h2>The {props.chivalry === 0?"Dishonoured":props.chivalry > 4?"Virtuous":"Honoured"} Knights of House Hawkshroud</h2>
         {/*DONE: Loop through Total VP Array and total it instead of just displaying the array */}
-        <h2>Total Victory Points: {props.totalVP.reduce((a, b) => a + b, 0)}</h2>
-        </div>
-        <button className='customBtn' onClick={resetStates}>Reset</button>
+        <h3>Total Victory Points: {props.totalVP.reduce((a, b) => a + b, 0)}</h3>
+          
         <p>{props.code1 !== "Select an Oath"? props.code1: null}</p>
         <p>{props.code2 !== "Select an Oath"? props.code1 === props.code2?"Please select a second oath, taking the same oath twice has no benefit." : props.code2: null}</p>
-        
+        <button className='customBtn' onClick={resetStates}>Reset</button>    
       </div>
       
     );
