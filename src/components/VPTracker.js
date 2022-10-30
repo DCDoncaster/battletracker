@@ -27,7 +27,7 @@ function VPComponent(props) {
     props.setTotalVP(nextVP);
   }
 
-return <div id='primaryVPHolder'>
+return <div className='primaryVPHolder'>
 {props.totalVP.map((mapVP,index)=>{
   return <div className="VPDiv">
     <button className="customBtn" onClick={() => handleIncrementClick(index)}>+</button>

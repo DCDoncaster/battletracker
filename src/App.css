@@ -57,12 +57,19 @@ display: inline-block;
   list-style-type: none;
 }
 
-#primaryVPHolder {
+.primaryVPHolder {
   display: flex;
   /* set width to full screen */
   width: 100%;
   flex-direction: row;
   background-color: yellow;
+}
+.secondaryVPHolder {
+  display: flex;
+  /* set width to full screen */
+  width: auto;
+  flex-direction: row;
+  background-color: red;
 }
 .VPDiv {
   display: flex;
@@ -73,8 +80,20 @@ display: inline-block;
   border-width: 1px;
   border-color: black;
 }
+.VP2Div {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  justify-content: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: orange;
+}
+
 
 #Header {
+  display: flex;
+  flex-direction: row;
   height: auto;
   max-height: 15rem;
 }

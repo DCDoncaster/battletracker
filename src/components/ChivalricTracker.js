@@ -11,8 +11,7 @@ function ChivalryComponent(props) {
         {/* button to decrease chivalry by 1 to minimum of 0*/}
         <button className='customBtn' onClick={() => props.chivalry >0 ?props.setChivalry(props.chivalry - 1):props.setChivalry}>-</button>
 {/* set contents of props.setCode1 based on dropdown box */}
-{/* TODO: Set value of last selected and check for duplicates in list */}
-        <select id="CCode1" onChange={(e) => props.setCode1(e.target.value)}>
+       <div> <select id="CCode1" onChange={(e) => props.setCode1(e.target.value)}>
         <option value="Select an Oath" hidden>Select an Oath</option>
           <option value="Protect Those in Need">Protect Those in Need</option>
           <option value="Defend the Realm">Defend the Realm</option>
@@ -26,6 +25,7 @@ function ChivalryComponent(props) {
           <option value="Refuse No Challenge">Refuse No Challenge</option>
           <option value="Lay Low the Tyrants">Lay Low the Tyrants</option>
           </select>
+          </div>
         </div>
 
 

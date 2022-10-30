@@ -1,10 +1,11 @@
 import './App.css';
 import React from 'react';
-import TurnComponent from './components/TurnTracker';
+// import TurnComponent from './components/TurnTracker';
 import ChivalryComponent from './components/ChivalricTracker';
 import Header from './components/Header';
 import CommandComponent from './components/CommandTracker';
 import VPComponent from './components/VPTracker';
+import SecondaryVPComponent from './components/secondaryVP';
 
 //Code to store state in local storage
 function useStickyState(defaultValue, key) {
@@ -29,15 +30,18 @@ function App() {
   const [chivalry, setChivalry] = useStickyState(1, "chivalry");
   const [commandPoints, setCommandPoints] = useStickyState(1, "commandPoints");
   const [totalVP, setTotalVP] = useStickyState([0,0,0,0,0], "totalVP");
+  const [secondaryVP, setSecondaryVP] = useStickyState([0,0,0], "secondaryVP");
   const [code1, setCode1] = useStickyState("Select an Oath", "code1");
   const [code2, setCode2] = useStickyState("Select an Oath", "code2");
 
   return (
     <div className="App">
-      <div ><Header chivalry={chivalry} totalVP={totalVP} setTurn={setTurn} setChivalry={setChivalry} setCommandPoints={setCommandPoints} setTotalVP={setTotalVP} setCode1={setCode1} code1={code1} code2={code2} setCode2={setCode2}/></div>
+      <div ><Header secondaryVP={secondaryVP} setSecondaryVP={setSecondaryVP} chivalry={chivalry} totalVP={totalVP} turn={turn} setTurn={setTurn} setChivalry={setChivalry} commandPoints={commandPoints} setCommandPoints={setCommandPoints} setTotalVP={setTotalVP} setCode1={setCode1} code1={code1} code2={code2} setCode2={setCode2}/></div>
       <div id ='row0'><VPComponent totalVP={totalVP} setTotalVP={setTotalVP}/></div>
       <div id='row1'>
-      <div className='Component'><TurnComponent turn={turn} setTurn={setTurn} commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
+      <div className='Component'><SecondaryVPComponent secondaryVP={secondaryVP} setSecondaryVP={setSecondaryVP} totalVP={totalVP} setTotalVP={setTotalVP}/></div>  
+      {/* Moved below component to Header for Usability Reasons */}
+      {/* <div className='Component'><TurnComponent turn={turn} setTurn={setTurn} commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div> */}
       <div className='Component'><ChivalryComponent chivalry={chivalry} setChivalry={setChivalry} setCode1={setCode1} setCode2={setCode2} code1={code1} code2={code2}/></div>
       <div className='Component'><CommandComponent commandPoints={commandPoints} setCommandPoints={setCommandPoints}/></div>
       
